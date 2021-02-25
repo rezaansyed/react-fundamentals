@@ -15,13 +15,11 @@
     // These three lines are similar to React.createElement
     const elementProps = {
       className: 'container',
-      children: [
-        React.createElement('span', {children: 'Hello'}),
-        ' ',
-        React.createElement('span', {children: 'World'})
-      ]
     }
-    const element = React.createElement('div', elementProps)
+
+    const helloElement = React.createElement('span', {children: 'Hello'})
+    const worldElement = React.createElement('span', {children: 'World'})
+    const element = React.createElement('div', elementProps, helloElement, ' ', worldElement)
     // This is similar to ReactDOM.render
     ReactDOM.render(element, rootElement)
 
